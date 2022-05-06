@@ -2,7 +2,7 @@ package com.nfdeveloper.helpdesk.domain.enums;
 
 public enum Status {
 
-	BAIXA(0, "BAIXA"),MEDIA(1, "MEDIA"), ALTA(2, "ALTA");
+	ABERTO(0, "ABERTO"),ANDAMENTO(1, "ANDAMENTO"), FECHADO(2, "FECHADO");
 	
 	private Integer codigo;
 	private String descricao;

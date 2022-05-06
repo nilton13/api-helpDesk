@@ -16,12 +16,12 @@ public class Tecnico extends Pessoa{
 	private List<Chamado> chamados = new ArrayList<>();
 
 	public Tecnico() {
-		super();
+		super(); 
 		addPerfil(Perfil.CLIENTE);
 	}
 
-	public Tecnico(Integer id, String nome, String cpf, String email) {
-		super(id, nome, cpf, email);
+	public Tecnico(Integer id, String nome, String cpf, String email, String senha) {
+		super(id, nome, cpf, email, senha);
 		addPerfil(Perfil.CLIENTE);
 	}
 	

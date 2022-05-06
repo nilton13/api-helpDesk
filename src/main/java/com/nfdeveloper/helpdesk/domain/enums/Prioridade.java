@@ -2,7 +2,7 @@ package com.nfdeveloper.helpdesk.domain.enums;
 
 public enum Prioridade {
 
-	ADMIN(0, "ROLE_ADMIN"),CLIENTE(1, "ROLE_CLIENTE"), TECNICO(2, "ROLE_TECNICO");
+	ALTA(0, "ALTA"),MEDIA(1, "MEDIA"), BAIXA(2, "BAIXA");
 	
 	private Integer codigo;
 	private String descricao;

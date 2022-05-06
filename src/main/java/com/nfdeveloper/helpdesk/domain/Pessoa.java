@@ -32,6 +32,7 @@ public abstract class Pessoa implements Serializable{
 	protected String cpf;
 	@Column(unique = true)
 	protected String email;
+	protected String senha;
 	
 	@ElementCollection(fetch = FetchType.EAGER)
 	@CollectionTable(name = "PERFIS")
@@ -45,12 +46,13 @@ public abstract class Pessoa implements Serializable{
 		addPerfil(Perfil.CLIENTE);
 	}
 
-	public Pessoa(Integer id, String nome, String cpf, String email) {
+	public Pessoa(Integer id, String nome, String cpf, String email, String senha) {
 		super();
 		this.id = id;
 		this.nome = nome;
 		this.cpf = cpf;
 		this.email = email;
+		this.senha = senha;
 	}
 
 	public Integer getId() {
@@ -84,7 +86,16 @@ public abstract class Pessoa implements Serializable{
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
+	
+	public String getSenha() {
+		return senha;
+	}
+	
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
+	
+	
 	public Set<Perfil> getPerfis() {
 		return perfis
 				.stream()
